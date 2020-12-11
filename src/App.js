@@ -10,8 +10,8 @@ import User from "./pages/User";
 function App() {
   return (
     <>
-      <NavBar />
       <Container>
+        <NavBar />
         <MyContainer>
           <Switch>
             <Route exact path="/" component={Home} />
