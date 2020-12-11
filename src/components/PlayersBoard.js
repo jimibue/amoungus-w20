@@ -19,25 +19,42 @@ export default (props) => {
             </Header.Content>
           </Header>
         </Table.Cell>
-        <Table.Cell>
-          {player.total_games}
-          <Button color="green" size="tiny" icon="plus"></Button>
-        </Table.Cell>
+        <Table.Cell>{player.total_games}</Table.Cell>
         <Table.Cell>
           {player.times_imposter}
-          <Button color="green" size="tiny" icon="plus"></Button>
+          <Button
+            color="green"
+            size="tiny"
+            icon="plus"
+            onClick={() => props.incrementUserStat(player.id, "times_imposter")}
+          ></Button>
         </Table.Cell>
         <Table.Cell>
           {player.imposter_wins}
-          <Button color="green" size="tiny" icon="plus"></Button>
+          <Button
+            color="green"
+            size="tiny"
+            icon="plus"
+            onClick={() => props.incrementUserStat(player.id, "imposter_wins")}
+          ></Button>
         </Table.Cell>
         <Table.Cell>
           {player.times_crew}
-          <Button color="green" size="tiny" icon="plus"></Button>
+          <Button
+            color="green"
+            size="tiny"
+            icon="plus"
+            onClick={() => props.incrementUserStat(player.id, "times_crew")}
+          ></Button>
         </Table.Cell>
         <Table.Cell>
           {player.crew_wins}
-          <Button color="green" size="tiny" icon="plus"></Button>
+          <Button
+            color="green"
+            size="tiny"
+            icon="plus"
+            onClick={() => props.incrementUserStat(player.id, "crew_wins")}
+          ></Button>
         </Table.Cell>
       </Table.Row>
     );
